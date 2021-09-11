@@ -27,6 +27,6 @@ public class Hotels {
 
     @Override
     public String toString() {
-        return "Hotel Name= " + hotelName + ", Regular Rate = " + RegularRatePerDay + "\n";
+        return "Hotel Name= " + hotelName + ", Regular Rate = $" + RegularRatePerDay + "\n";
     }
 }
