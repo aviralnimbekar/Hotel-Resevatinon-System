@@ -2,11 +2,15 @@ package com.bridgelabz;
 
 public class Hotels {
     private String hotelName;
-    private int RegularRatePerDay;
+    private int regularRatePerDay;
+    private int weekdayRatePerDay;
+    private int weekendRatePerDay;
 
-    public Hotels(String hotelName, int regularRatePerDay) {
+    public Hotels(String hotelName, int regularRatePerDay, int weekdayRatePerDay, int weekendRatePerDay) {
         this.hotelName = hotelName;
-        RegularRatePerDay = regularRatePerDay;
+        this.regularRatePerDay = regularRatePerDay;
+        this.weekdayRatePerDay = weekdayRatePerDay;
+        this.weekendRatePerDay = weekendRatePerDay;
     }
 
     public String getHotelName() {
@@ -18,15 +22,36 @@ public class Hotels {
     }
 
     public int getRegularRatePerDay() {
-        return RegularRatePerDay;
+        return regularRatePerDay;
     }
 
     public void setRegularRatePerDay(int regularRatePerDay) {
-        RegularRatePerDay = regularRatePerDay;
+        this.regularRatePerDay = regularRatePerDay;
+    }
+
+    public int getWeekdayRatePerDay() {
+        return weekdayRatePerDay;
+    }
+
+    public void setWeekdayRatePerDay(int weekdayRatePerDay) {
+        this.weekdayRatePerDay = weekdayRatePerDay;
+    }
+
+    public int getWeekendRatePerDay() {
+        return weekendRatePerDay;
+    }
+
+    public void setWeekendRatePerDay(int weekendRatePerDay) {
+        this.weekendRatePerDay = weekendRatePerDay;
     }
 
     @Override
     public String toString() {
-        return "Hotel Name= " + hotelName + ", Regular Rate = $" + RegularRatePerDay + "\n";
+        return "Hotels{" +
+                "hotelName='" + hotelName + '\'' +
+                ", regularRatePerDay=$" + regularRatePerDay +
+                ", weekdayRatePerDay=$" + weekdayRatePerDay +
+                ", weekendRatePerDay=$" + weekendRatePerDay +
+                '}';
     }
 }
