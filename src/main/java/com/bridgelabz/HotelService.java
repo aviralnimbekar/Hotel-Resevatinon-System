@@ -7,8 +7,8 @@ import java.util.*;
 public class HotelService {
     List<Hotels> hotelsList = new ArrayList<>();
 
-    boolean addHotelToList(String hotelName, int regularCustRate, int weekDayRate, int weekEndRate) {
-        Hotels hotels = new Hotels(hotelName, regularCustRate, weekDayRate, weekEndRate);
+    boolean addHotelToList(String hotelName, int regularCustRate, int weekDayRate, int weekEndRate, int hotelRating) {
+        Hotels hotels = new Hotels(hotelName, regularCustRate, weekDayRate, weekEndRate, hotelRating);
         return hotelsList.add(hotels);
     }
 
