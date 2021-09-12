@@ -40,7 +40,7 @@ public class HotelReservationTest {
         boolean hotelTwo = hotelService.addHotelToList("Bridgewood", 160, 150, 50);
         boolean hotelThree = hotelService.addHotelToList("Ridgewood", 220, 220, 150);
         try {
-            Hotels cheapestHotel = hotelService.toFindCheapestOnWeekDay("11Sep2020", "12Sep2020");
+            Hotels cheapestHotel = hotelService.toFindCheapestOnWeekDay("11Sep2020", "12Sep2020", "weekday");
             Assertions.assertEquals("Lakewood", cheapestHotel.getHotelName());
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -48,17 +48,16 @@ public class HotelReservationTest {
     }
 
     @Test
-    void givenHotelDeatails_WhenFoundCheapestOnWeekEnd_ShouldReturnTrue() {
+    void givenHotelDeatails_WhenFoundCheapestOnweekEnd_ShouldReturnTrue() {
         HotelService hotelService = new HotelService();
         boolean hotelOne = hotelService.addHotelToList("Lakewood", 110, 110, 90);
         boolean hotelTwo = hotelService.addHotelToList("Bridgewood", 160, 150, 50);
         boolean hotelThree = hotelService.addHotelToList("Ridgewood", 220, 220, 150);
         try {
-            Hotels cheapestHotel = hotelService.toFindCheapestOnWeekEnd("11Sep2020", "12Sep2020");
+            Hotels cheapestHotel = hotelService.toFindCheapestOnWeekDay("11Sep2020", "12Sep2020", "weekend");
             Assertions.assertEquals("Bridgewood", cheapestHotel.getHotelName());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
 }
