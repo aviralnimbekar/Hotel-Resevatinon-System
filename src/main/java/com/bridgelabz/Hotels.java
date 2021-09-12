@@ -2,15 +2,15 @@ package com.bridgelabz;
 
 public class Hotels {
     private String hotelName;
-    private int regularRatePerDay;
-    private int weekdayRatePerDay;
-    private int weekendRatePerDay;
+    private int regularCustRate;
+    private int weekDayRate;
+    private int weekEndRate;
 
-    public Hotels(String hotelName, int regularRatePerDay, int weekdayRatePerDay, int weekendRatePerDay) {
+    public Hotels(String hotelName, int regularCustRate, int weekDayRate, int weekEndRate) {
         this.hotelName = hotelName;
-        this.regularRatePerDay = regularRatePerDay;
-        this.weekdayRatePerDay = weekdayRatePerDay;
-        this.weekendRatePerDay = weekendRatePerDay;
+        this.regularCustRate = regularCustRate;
+        this.weekDayRate = weekDayRate;
+        this.weekEndRate = weekEndRate;
     }
 
     public String getHotelName() {
@@ -21,37 +21,37 @@ public class Hotels {
         this.hotelName = hotelName;
     }
 
-    public int getRegularRatePerDay() {
-        return regularRatePerDay;
+    public int getRegularCustRate() {
+        return regularCustRate;
     }
 
-    public void setRegularRatePerDay(int regularRatePerDay) {
-        this.regularRatePerDay = regularRatePerDay;
+    public void setRegularCustRate(int regularCustRate) {
+        this.regularCustRate = regularCustRate;
     }
 
-    public int getWeekdayRatePerDay() {
-        return weekdayRatePerDay;
+    public int getWeekDayRate() {
+        return weekDayRate;
     }
 
-    public void setWeekdayRatePerDay(int weekdayRatePerDay) {
-        this.weekdayRatePerDay = weekdayRatePerDay;
+    public void setWeekDayRate(int weekDayRate) {
+        this.weekDayRate = weekDayRate;
     }
 
-    public int getWeekendRatePerDay() {
-        return weekendRatePerDay;
+    public int getWeekEndRate() {
+        return weekEndRate;
     }
 
-    public void setWeekendRatePerDay(int weekendRatePerDay) {
-        this.weekendRatePerDay = weekendRatePerDay;
+    public void setWeekEndRate(int weekEndRate) {
+        this.weekEndRate = weekEndRate;
     }
 
     @Override
     public String toString() {
         return "Hotels{" +
                 "hotelName='" + hotelName + '\'' +
-                ", regularRatePerDay=$" + regularRatePerDay +
-                ", weekdayRatePerDay=$" + weekdayRatePerDay +
-                ", weekendRatePerDay=$" + weekendRatePerDay +
+                ", regularCustRate=$" + regularCustRate +
+                ", weekDayRate=$" + weekDayRate +
+                ", weekEndRate=$" + weekEndRate +
                 '}';
     }
 }
